@@ -6,6 +6,7 @@ skip-lint = false
 
 [programs.localnet]
 account_data = "8NvteZcroHN4inQuuHjNjch3SrPhBuKEa558sz8k8jUv"
+voting-program = "EvC4qfru7mTT8ZDRoDCTTk9Zy9pqVALj53ievsSLgX7v"
 
 [registry]
 url = "https://api.apr.dev"
