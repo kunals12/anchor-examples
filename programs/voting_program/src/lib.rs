@@ -3,7 +3,7 @@ use anchor_lang::prelude::*;
 declare_id!("EvC4qfru7mTT8ZDRoDCTTk9Zy9pqVALj53ievsSLgX7v");
 
 #[program]
-pub mod voting_program {
+pub mod voting {
     use super::*;
 
     pub fn initialize_poll(
@@ -11,12 +11,14 @@ pub mod voting_program {
         poll_id: u64,
         poll_start: u64,
         poll_end: u64,
+        description: String,
     ) -> Result<()> {
         let poll = &mut ctx.accounts.poll;
         poll.poll_id = poll_id;
         poll.poll_start = poll_start;
         poll.poll_end = poll_end;
         poll.candidate_amount = 0;
+        poll.description = description;
         Ok(())
     }
 }
